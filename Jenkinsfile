@@ -1,10 +1,13 @@
 pipeline {
     agent any
-
     stages {
         stage('build') {
             steps {
-                sh 'python --version'
+
+                   
+                   input "Does the staging environment look ok?"
+
+                sh 'python hello4.py'
             }
         }
     }
